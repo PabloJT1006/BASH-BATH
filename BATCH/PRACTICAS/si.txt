@@ -1,0 +1,26 @@
+@echo off
+
+if exist %1 (
+    type %1 > nul
+    if errorlevel 1 echo "Es un directorio" & goto fin
+    if errorlevel 0 echo "es un fichero"
+)
+if not exist %1 echo "No existe" 
+
+
+
+:fin@echo off
+if exist "MICOLE.DAT" (
+    dir "MICOLE.DAT"
+    sort "MICOLE.DAT" 
+)
+if not exist "MICOLE.DAT" (
+    echo "El archivo MICOLE.DAT no existe"
+)@echo off
+if exist "MICOLE.DAT" (
+    dir "MICOLE.DAT"
+    sort "MICOLE.DAT" 
+)
+if not exist "MICOLE.DAT" (
+    echo "El archivo MICOLE.DAT no existe"
+)
